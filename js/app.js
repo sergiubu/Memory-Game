@@ -17,6 +17,16 @@ for (var i = 0; i < deckArr.length; i++) {
   deckArr[i].addEventListener('click', endGame);
 }
 
+// Check if flipped cards match
+function selectedCards() {
+  openedCards.push(this);
+  const length = openedCards.length;
+  if (length === 2) {
+    moveCounter();
+    openedCards[0].innerHTML === openedCards[1].innerHTML ? match() : noMatch();
+  }
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
