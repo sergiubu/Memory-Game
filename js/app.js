@@ -27,6 +27,15 @@ function selectedCards() {
   }
 }
 
+// If the cards match
+function match() {
+  openedCards[0].classList.add('match', 'wobble');
+  openedCards[1].classList.add('match', 'wobble');
+  openedCards[0].classList.remove('open', 'show', 'rotateIn');
+  openedCards[1].classList.remove('open', 'show', 'rotateIn');
+  openedCards = [];
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
