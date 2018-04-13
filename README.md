@@ -1,20 +1,13 @@
 # Memory Game Project
 
-## Table of Contents
+A simple memory card game, created using vanilla JavaScript.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+Animated using [Animate CSS] (https://daneden.github.io/animate.css/)
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+Click a card to flip it over, match two of the same card types. Find all eight card pairs.
 
-To get started, open `js/app.js` and start building out the app's functionality
+After you successfully found all eight pairs, a congratulations modal will appear, revealing the total time it took you to complete the game, the total number of moves you made and your star rating.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+Good luck and have fun!
