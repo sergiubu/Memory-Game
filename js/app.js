@@ -14,7 +14,6 @@ function flipCard() {
 for (var i = 0; i < deckArr.length; i++) {
   deckArr[i].addEventListener('click', flipCard);
   deckArr[i].addEventListener('click', selectedCards);
-  deckArr[i].addEventListener('click', endGame);
 }
 
 // Check if flipped cards match
