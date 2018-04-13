@@ -2,6 +2,14 @@
 const deck = document.getElementsByClassName('card');
 const deckArr = [...deck];
 
+// Add/remove card classes
+function flipCard() {
+  this.classList.toggle('rotateIn');
+  this.classList.toggle('open');
+  this.classList.toggle('show');
+  this.classList.toggle('disable');
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
