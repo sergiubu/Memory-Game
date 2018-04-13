@@ -36,6 +36,19 @@ function match() {
   openedCards = [];
 }
 
+// If the cards don't match
+function noMatch() {
+  openedCards[0].classList.add('nomatch');
+  openedCards[1].classList.add('nomatch');
+  disableCards();
+  setTimeout(_ => {
+    openedCards[0].classList.remove('show', 'open', 'nomatch', 'rotateIn', 'wobble');
+    openedCards[1].classList.remove('show', 'open', 'nomatch', 'rotateIn', 'wobble');
+    enableCards();
+    openedCards = [];
+  }, 1100);
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
