@@ -2,7 +2,7 @@
 
 A simple memory card game, created using vanilla JavaScript.
 
-Animated using [Animate CSS] (https://daneden.github.io/animate.css/)
+Animated using [Animate CSS](https://daneden.github.io/animate.css/)
 
 ## Instructions
 
