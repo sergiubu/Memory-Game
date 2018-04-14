@@ -50,6 +50,13 @@ function noMatch() {
   }, 1100);
 }
 
+// Prevent user from flipping more than 2 cards
+function disableCards() {
+  [].filter.call(deckArr, deck => {
+    deck.classList.add('disable');
+  });
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
