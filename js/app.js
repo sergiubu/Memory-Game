@@ -3,6 +3,8 @@ const deck = document.getElementsByClassName('card');
 const deckArr = [...deck];
 // Empty array to store selected cards
 let openedCards = [];
+// Matched cards
+const matchedCards = document.getElementsByClassName('match');
 
 // Add/remove card classes
 function flipCard() {
@@ -54,6 +56,16 @@ function noMatch() {
 function disableCards() {
   [].filter.call(deckArr, deck => {
     deck.classList.add('disable');
+  });
+}
+
+// Enable disabled cards and disable matched cards
+function enableCards() {
+  [].filter.call(deckArr, deck => {
+    deck.classList.remove('disable');
+    for (var i = 0; i < matchedCards.length; i++) {
+      matchedCards[i].classList.add('disable');
+    }
   });
 }
 
