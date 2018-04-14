@@ -1,6 +1,8 @@
 // Create a list that holds all of your cards
 const deck = document.getElementsByClassName('card');
 const deckArr = [...deck];
+// Empty array to store selected cards
+let openedCards = [];
 
 // Add/remove card classes
 function flipCard() {
