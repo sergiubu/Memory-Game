@@ -83,3 +83,22 @@ function shuffle(array) {
 
     return array;
 }
+
+// Starts a new game
+function startGame() {
+  // Select all cards
+  const deck = document.querySelector('.deck');
+  // Shuffle cards
+  shuffle(deckArr);
+  // Loop through each card and remove classes
+  for (let i = 0; i < deckArr.length; i++) {
+    deck.innerHTML = '';
+    [].forEach.call(deckArr, (item) => {
+      deck.appendChild(item);
+    });
+    deckArr[i].classList.remove('show', 'open', 'match', 'disable', 'rotateIn', 'wobble', 'shake');
+  }
+
+  // Clear opened cards array
+  openedCards = [];
+}
