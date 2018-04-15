@@ -102,3 +102,6 @@ function startGame() {
   // Clear opened cards array
   openedCards = [];
 }
+
+// Shuffles cards when the window is loaded
+window.onload = startGame();
