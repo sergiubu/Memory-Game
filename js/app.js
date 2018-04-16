@@ -154,6 +154,10 @@ function startGame() {
   // Reset moves
   move = 0;
   moves.innerHTML = move;
+  // Reset star rating
+  for (var i = 0; i < stars.length; i++) {
+    stars[i].style.visibility = 'visible';
+  }
   // Clear opened cards array
   openedCards = [];
 }
