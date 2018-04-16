@@ -199,3 +199,9 @@ function closeModal() {
     modal.classList.remove('show');
   });
 }
+
+// Play again button on modal
+function playAgain() {
+  modal.classList.remove('show');
+  startGame();
+}
