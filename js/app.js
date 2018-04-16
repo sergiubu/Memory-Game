@@ -158,6 +158,11 @@ function startGame() {
   for (var i = 0; i < stars.length; i++) {
     stars[i].style.visibility = 'visible';
   }
+  // Reset timer
+  seconds = 0;
+  minutes = 0;
+  timer.innerHTML = '00 : 00';
+  clearInterval(interval);
   // Clear opened cards array
   openedCards = [];
 }
