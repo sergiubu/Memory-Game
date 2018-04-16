@@ -191,3 +191,11 @@ function endGame() {
     closeModal();
   }
 }
+
+// Closes modal
+function closeModal() {
+  const close = document.querySelector('.close');
+  close.addEventListener('click', _ => {
+    modal.classList.remove('show');
+  });
+}
