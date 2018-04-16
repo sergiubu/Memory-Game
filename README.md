@@ -2,6 +2,8 @@
 
 A simple memory card game, created using vanilla JavaScript.
 
+[Play it](https://sergiubu.github.io/Memory-Game/)
+
 Animated using [Animate CSS](https://daneden.github.io/animate.css/)
 
 ## Instructions
