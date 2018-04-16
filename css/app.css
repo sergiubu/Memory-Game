@@ -203,3 +203,8 @@ h1 {
 #showRating li {
   display: inline-block;
 }
+
+/* animation */
+.rotateIn {
+  animation-duration: 0.8s;
+}
