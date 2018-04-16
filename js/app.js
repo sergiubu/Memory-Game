@@ -10,6 +10,11 @@ const moves = document.querySelector('.moves');
 const stars = document.querySelectorAll('.fa-star');
 // Matched cards
 const matchedCards = document.getElementsByClassName('match');
+// Declaring time var & selecting timer
+let   seconds = 0,
+      minutes = 0,
+      interval;
+const timer = document.querySelector('.timer');
 
 // Add/remove card classes
 function flipCard() {
@@ -95,6 +100,23 @@ function moveCounter() {
   }
 }
 
+// Timer
+function startTimer() {
+  // Remove Start Timer event listener
+  [].filter.call(deckArr, deck => {
+    deck.removeEventListener('click', startTimer);
+  });
+
+  interval = setInterval(function () {
+    timer.innerHTML = minutes.toLocaleString(undefined, {minimumIntegerDigits: 2}) + ' : ' + seconds.toLocaleString(undefined, {minimumIntegerDigits: 2});
+    seconds++;
+    if (seconds === 60) {
+      minutes++;
+      seconds = 0;
+    }
+  }, 1000);
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -112,6 +134,11 @@ function shuffle(array) {
 
 // Starts a new game
 function startGame() {
+  // Add event listener for starting the timer
+  for (var i = 0; i < deckArr.length; i++) {
+    deckArr[i].addEventListener('click', startTimer);
+  }
+  
   // Select all cards
   const deck = document.querySelector('.deck');
   // Shuffle cards
