@@ -15,6 +15,8 @@ let   seconds = 0,
       minutes = 0,
       interval;
 const timer = document.querySelector('.timer');
+// Select modal
+const modal = document.getElementById('modal');
 
 // Add/remove card classes
 function flipCard() {
@@ -28,6 +30,7 @@ function flipCard() {
 for (var i = 0; i < deckArr.length; i++) {
   deckArr[i].addEventListener('click', flipCard);
   deckArr[i].addEventListener('click', selectedCards);
+  deckArr[i].addEventListener('click', endGame);
 }
 
 // Check if flipped cards match
@@ -169,3 +172,22 @@ function startGame() {
 
 // Shuffles cards when the window is loaded
 window.onload = startGame();
+
+// Modal showing total time, rating and moves
+function endGame() {
+  if (matchedCards.length === 16) {
+    clearInterval(interval);
+    // Display modal
+    setTimeout( _ => {
+      modal.classList.add('show');
+    }, 1000);
+    // Display total moves, time and star rating
+    const showTime = timer.innerHTML;
+    const showRating = document.querySelector('.stars').innerHTML;
+    document.getElementById('showMoves').innerHTML = move;
+    document.getElementById('showTime').innerHTML = showTime;
+    document.getElementById('showRating').innerHTML = showRating;
+    // Run close modal
+    closeModal();
+  }
+}
