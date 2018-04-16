@@ -6,6 +6,8 @@ let openedCards = [];
 // Declaring move var & selecting moves counter
 let move = 0;
 const moves = document.querySelector('.moves');
+// Select star rating
+const stars = document.querySelectorAll('.fa-star');
 // Matched cards
 const matchedCards = document.getElementsByClassName('match');
 
