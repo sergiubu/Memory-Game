@@ -131,3 +131,75 @@ h1 {
   display: inline-block;
   margin: 0 1em;
 }
+
+/*
+ * Modal
+ */
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  align-items: center;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-weight: bold;
+  justify-content: center;
+  margin: 100px auto;
+  padding: 25px;
+  position: relative;
+  width: 60%;
+}
+
+.modal-content .close {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 2em;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 10px;
+  right: 0;
+  width: 2em;
+}
+
+.modal-content .close:hover {
+  color: #f00;
+}
+
+#rePlay {
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 0.5em 1.5em;
+  width: 100%;
+}
+
+#rePlay:hover {
+  background: linear-gradient(160deg, #aa7ecd 0%, #02ccba 100%);
+}
+
+.show {
+  display: block;
+}
+
+#showRating li {
+  display: inline-block;
+}
