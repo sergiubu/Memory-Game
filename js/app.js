@@ -138,7 +138,7 @@ function startGame() {
   for (var i = 0; i < deckArr.length; i++) {
     deckArr[i].addEventListener('click', startTimer);
   }
-  
+
   // Select all cards
   const deck = document.querySelector('.deck');
   // Shuffle cards
@@ -151,7 +151,9 @@ function startGame() {
     });
     deckArr[i].classList.remove('show', 'open', 'match', 'disable', 'rotateIn', 'wobble', 'shake');
   }
-
+  // Reset moves
+  move = 0;
+  moves.innerHTML = move;
   // Clear opened cards array
   openedCards = [];
 }
