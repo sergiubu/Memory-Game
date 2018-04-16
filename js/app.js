@@ -69,6 +69,12 @@ function enableCards() {
   });
 }
 
+// Keep track of player moves
+function moveCounter() {
+  move++;
+  moves.innerHTML = move;
+}
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
