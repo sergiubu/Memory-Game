@@ -97,6 +97,12 @@ h1 {
     text-align: left;
     width: 345px;
     margin-bottom: 10px;
+    padding: 15px;
+    background: -webkit-linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    background: -o-linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
 .score-panel .stars {
