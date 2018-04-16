@@ -85,6 +85,10 @@ h1 {
   background: #f00;
 }
 
+.deck .card.disable {
+  pointer-events: none;
+}
+
 /*
  * Styles for the Score Panel
  */
