@@ -208,3 +208,32 @@ h1 {
 .rotateIn {
   animation-duration: 0.8s;
 }
+
+/* Media */
+@media screen and (max-width: 360px) {
+  .deck {
+    width: 85%;
+  }
+  .deck .card {
+    margin: 4px;
+    height: 6rem;
+    width: 6rem;
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 640px) {
+  .deck {
+    padding: 22px;
+    width: 85%;
+  }
+  .deck .card {
+    margin: 4px;
+    height: 7rem;
+    width: 7rem;
+  }
+  .modal-content {
+    margin: 3px auto;
+  }
+  .modal-content p:first-of-type {
+    margin: 0;
+  }
+}
