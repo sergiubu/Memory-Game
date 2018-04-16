@@ -73,6 +73,21 @@ function enableCards() {
 function moveCounter() {
   move++;
   moves.innerHTML = move;
+
+  // Display star rating
+  if (move > 13 && move < 15) {
+    for (let i = 0; i < 3; i++) {
+      if (i > 1) {
+        stars[i].style.visibility = 'collapse';
+      }
+    }
+  } else if (move > 15) {
+    for (let i = 0; i < 3; i++) {
+      if (i > 0) {
+        stars[i].style.visibility = 'collapse';
+      }
+    }
+  }
 }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
