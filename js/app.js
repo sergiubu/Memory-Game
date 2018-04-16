@@ -3,6 +3,9 @@ const deck = document.getElementsByClassName('card');
 const deckArr = [...deck];
 // Empty array to store selected cards
 let openedCards = [];
+// Declaring move var & selecting moves counter
+let move = 0;
+const moves = document.querySelector('.moves');
 // Matched cards
 const matchedCards = document.getElementsByClassName('match');
 
